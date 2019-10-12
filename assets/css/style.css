@@ -1,0 +1,478 @@
+/* Content section is always at least the hight of the screen with a negative margin the height of the footer plus it's border. */
+#content {
+    min-height: 100vh;
+    margin: 0 auto -88px;
+    background-image: url("../images/background.jpg");
+    background-size: cover;
+}
+/* Returning the i tag to default after the reset.css file changed it. */
+i { 
+    font-style: italic;
+}
+/* Some basic definitions for headers on this site. */
+h1, h2 {
+    font-family: 'Georgia', Times, Times New Roman, serif;
+    font-weight: bold;
+    color: #4aaaa5;
+    border-bottom: 3px solid #dddddd;
+}
+
+h1 {
+    font-size: 2em;
+    padding-bottom: 40px;
+    margin-bottom: 20px;
+}
+
+.para{
+    text-align: justify;
+    text-justify: inter-word; 
+}
+
+h2 {
+    font-size: 1.3em;
+    padding-bottom: 25px;
+}
+/* The top bar header with navigation. */
+header {
+    width: 100%;
+    height: 80px;
+    background-color: white;
+    border-bottom: 4px solid #cccccc;
+    font-family: 'Georgia', Times, Times New Roman, serif;
+    margin-bottom: 40px;
+}
+
+header section {
+    width: 960px;
+    margin: 0 auto;
+}
+
+#myName {
+    height: 80px;
+    padding: 0px 30px 0px 30px;
+    float: left;
+    line-height: 80px;
+    background-color: #00b2be;
+    text-align: center;
+    font-size: 2em;
+    font-weight: bold;
+    color: whitesmoke;
+}
+
+nav {
+    height: 100%;
+    float: right;
+}
+
+.navButton {
+    display: inline-block;
+    height: 100%;
+    line-height: 80px;
+    font-family: 'Arial', 'Helvetica Neue', Helvetica, sans-serif;
+    font-size: 1.1em;
+}
+
+.navButton a {
+    padding: 0px 30px 0px 30px;
+    color: #999999;
+    text-decoration: none;
+}
+/* The small vertical line separating the nav buttons. */
+#portButton a {
+    border-left: 2px solid #efefef;
+    border-right: 2px solid #efefef;
+}
+/* Sets the width and centers all the content below the header. */
+#bodyContent {
+    width: 960px;
+    margin: 0 auto;
+}
+/* Allows the body content section to grow with the main content section. */
+#bodyContent::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+/* Content displayed in the main box to the left of the screen. */
+#mainContent {
+    width: 590px;
+    padding: 40px 30px 40px 30px;
+    margin-bottom: 50px;
+    background-color: white;
+    box-shadow: 4px 4px 15px 2px #333333;
+    float: left;
+    font-family: 'Arial', 'Helvetica Neue', Helvetica, sans-serif;
+    color: #777777;
+    font-size: 1.2em;
+    line-height: 2em;
+}
+/* The following styles are specific to the about me page */
+#mainContent p {
+    margin: 16px 0px 16px 0px;
+    text-indent: 30px;
+}
+
+#profilePic {
+    width: 300px;
+    height: auto;
+    float: left;
+    margin: 0px 20px 10px 0px;
+}
+
+/* The following styles are specific to the portfolio page */
+.thumbnail {
+    position: relative;
+    margin-bottom: 40px;
+    cursor: pointer;
+    transition: all .8s ease;
+}
+/* Make thumbnail larger when hovered. */
+.thumbnail:hover {
+    transform: scale(1.1);
+}
+/* Maintains aspect ratio of image but does not allow image to be any wider than set amount of pixels. */
+.thumbnail img {
+    max-width: 270px;
+}
+
+.left {
+    float: left;
+}
+
+.right {
+    float: right;
+}
+/* The label on the image. */
+.label {
+    position: absolute;
+    bottom: 20px;
+    left: 0px;
+    height: 60px;
+    line-height: 60px;
+    width: 100%;
+    text-align: center;
+    color: white;
+    font-size: 1.2em;
+    background-color: rgba(74, 170, 165, .7);
+}
+/* The following styles are specific to the contact us page */
+textarea {
+    resize: none;
+    width: calc(100% - 20px);
+    font-size: 1em;
+    padding: 5px 5px 5px 15px;
+}
+
+input {
+    width: calc(100% - 20px);
+    padding: 5px 5px 5px 15px;
+    font-size: .8em;
+}
+
+#submitButton {
+    background-color: #4aaaa5;
+    border: none;
+    color: white;
+    font-weight: bold;
+    font-size: 1em;
+    width: auto;
+    padding: 8px 16px 8px 16px;
+    cursor: pointer;
+}
+/* The following styles are for the sidebar on the right that is on all pages. */
+#sideBar {
+    width: 210px;
+    padding: 40px 30px 40px 30px;
+    background-color: white;
+    box-shadow: 4px 4px 15px 2px #333333;
+    float: right;
+}
+
+#sideBar a {
+    text-decoration: none;
+}
+/* Styles for the social icons link with opacity transition animation. */
+.socialIcon {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 60px;
+    margin-top: 20px;
+}
+
+.socialIcon div {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 60px;
+    height: 60px;
+}
+
+#gitHubIconBlack {
+    background-image: url("../images/github.png");
+    background-size: contain;
+    transition: opacity .3s ease;
+}
+
+#gitHubIconBlack:hover {
+    transform: scale(1.3);
+}
+
+#middleIcon {
+    margin: 0px 10px 0px 10px;
+}
+
+#linkedinIconBlack {
+    background-image: url("../images/linkedin.png");
+    background-size: contain;
+    transition: opacity .3s ease;
+}
+
+#linkedinIconBlack:hover {
+    transform: scale(1.3);
+}
+
+#stackIconBlack {
+    background-image: url("../images/stackoverflow.png");
+    background-size: contain;
+    transition: opacity .3s ease;
+}
+
+#stackIconBlack:hover {
+    transform: scale(1.3);
+}
+/* Height of the footer and height of the blank div that is added to the body to stop the footer from overlapping body content. */
+footer, .push {
+    height: 80px;
+}
+
+footer {
+    background-color: #000000;
+    border-top: 8px solid #4aaaa5;
+    line-height: 80px;
+    color: rgb(254, 255, 255);
+    text-align: center;
+}
+
+@media screen and (max-width: 980px) {
+    header section {
+        width: 720px;
+        margin: 0 auto;
+    }
+    
+    .navButton a {
+        padding: 0px 15px 0px 15px;
+        color: #999999;
+        text-decoration: none;
+    }
+
+    #bodyContent {
+        width: 720px;
+        margin: 0 auto;
+    }
+
+    #mainContent {
+        width: 380px;
+        padding: 40px 30px 40px 30px;
+        margin-bottom: 50px;
+        background-color: white;
+        box-shadow: 4px 4px 15px 2px #333333;
+        float: left;
+        font-family: 'Arial', 'Helvetica Neue', Helvetica, sans-serif;
+        color: #777777;
+        font-size: 1.2em;
+        line-height: 2em;
+    }
+    /* For the home page */
+    #profilePic {
+        width: 380px;
+        height: auto;
+        margin: 0px 0px 20px 0px;
+    }
+    /* For the portfolio page */
+    .thumbnail {
+        position: relative;
+        margin-bottom: 40px;
+        cursor: pointer;
+        transition: all .8s ease;
+    }
+
+    .thumbnail img {
+        max-width: 380px;
+    }
+    
+    .left {
+        float: none;
+    }
+    
+    .right {
+        float: none;
+    }
+
+    #middleIcon {
+        margin: 0px 6px 0px 6px;
+    }
+
+    #sideBar {
+        width: 200px;
+        padding: 40px 20px 40px 20px;
+        background-color: white;
+        box-shadow: 4px 4px 15px 2px #333333;
+        float: right;
+    }
+}
+@media screen and (max-width: 768px) {
+    header section {
+        width: 600px;
+        margin: 0 auto;
+    }
+    
+    .navButton a {
+        padding: 0px 5px 0px 5px;
+        color: #999999;
+        text-decoration: none;
+    }
+
+    #bodyContent {
+        width: 600px;
+        margin: 0 auto;
+    }
+
+    #mainContent {
+        width: 540px;
+        padding: 40px 30px 40px 30px;
+        margin-bottom: 50px;
+        background-color: white;
+        box-shadow: 4px 4px 15px 2px #333333;
+        font-family: 'Arial', 'Helvetica Neue', Helvetica, sans-serif;
+        color: #777777;
+        font-size: 1.2em;
+        line-height: 2em;
+    }
+    
+    #profilePic {
+        width: 240px;
+        height: auto;
+        float: left;
+        margin: 0px 20px 10px 0px;
+    }
+
+    .thumbnail {
+        position: relative;
+        margin-bottom: 40px;
+        cursor: pointer;
+        transition: all .8s ease;
+    }
+
+    .thumbnail img {
+        max-width: 250px;
+    }
+
+    .left {
+        float: left;
+    }
+
+    .right {
+        float: right;
+    }
+
+    #middleIcon {
+        margin: 0px 10px 0px 10px;
+    }
+
+    #sideBar {
+        width: 560px;
+        margin-bottom: 50px;
+        padding: 40px 20px 40px 20px;
+        background-color: white;
+        box-shadow: 4px 4px 15px 2px #333333;
+    }
+}
+@media screen and (max-width: 640px) {
+    header section {
+        width: 100%;
+    }
+
+    #myName {
+        width: 100%;
+    }
+
+    nav {
+        width: 100%;
+        background-color: white;
+        margin-bottom: 40px;
+    }
+
+    .navButton {
+        width: 33.33%;
+        float: left;
+        height: 50px;
+        line-height: 50px;
+        font-family: 'Arial', 'Helvetica Neue', Helvetica, sans-serif;
+        text-align: center;
+        font-size: 1.1em;
+    }
+    
+    .navButton a {
+        color: #999999;
+        text-decoration: none;
+    }
+
+    #portButton a {
+        border: none;
+    }
+
+    #bodyContent {
+        width: 100%;
+    }
+
+    #mainContent {
+        width: calc(100% - 120px);
+        padding: 40px 30px 40px 30px;
+        margin: 0px 0px 50px 30px;
+        background-color: white;
+        box-shadow: 4px 4px 15px 2px #333333;
+        font-family: 'Arial', 'Helvetica Neue', Helvetica, sans-serif;
+        color: #777777;
+        font-size: 1.2em;
+        line-height: 2em;
+    }
+    
+    #profilePic {
+        width: 100%;
+        height: 100%;
+        margin: 0px 0px 20px 0px;
+    }
+
+    .thumbnail {
+        position: relative;
+        margin-bottom: 40px;
+        cursor: pointer;
+        transition: all .8s ease;
+    }
+
+    .thumbnail img {
+        max-width: 100%;
+    }
+    
+    .left {
+        float: none;
+    }
+    
+    .right {
+        float: none;
+    }
+
+    #middleIcon {
+        margin: 0px 10px 0px 10px;
+    }
+
+    #sideBar {
+        width: calc(100% - 100px);
+        margin: 0px 0px 50px 30px;
+        padding: 40px 20px 40px 20px;
+        background-color: white;
+        box-shadow: 4px 4px 15px 2px #333333;
+        float: left;
+    }
+}
