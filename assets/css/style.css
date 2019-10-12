@@ -3,7 +3,8 @@
     min-height: 100vh;
     margin: 0 auto -88px;
     background-image: url("../images/background.jpg");
-    background-size: cover;
+    background-position-x: center;
+    background-position-y: center;
 }
 /* Returning the i tag to default after the reset.css file changed it. */
 i { 
