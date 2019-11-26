@@ -154,7 +154,7 @@ nav {
     text-align: center;
     color: white;
     font-size: 1.2em;
-    background-color: rgba(74, 170, 165, 0.61);
+    background-color: rgba(72, 103, 108, 0.393);
 }
 /* The following styles are specific to the contact us page */
 textarea {
@@ -396,6 +396,8 @@ footer {
 
     #myName {
         width: 100%;
+        position: relative;
+        left: -23px;
        
     }
 
