@@ -33,16 +33,18 @@
         <div id="bodyContent">
             <section id="mainContent">
                 <h1>Contact</h1>
-                <form>
+                <form class="contact-form" action="contactform.php" method="post">
                     <label for="name">Name</label><br>
                     <input type="text" id="name" placeholder="Your Name"><br>
                     <label for="email">Email</label><br>
                     <input type="email" id="email" placeholder="example@gmail.com"><br>
+                    <label for="email">Subject</label><br>
+                    <input type="text" id="subject" placeholder="Subject"><br>
                     <label for="message">Message</label><br>
                     <textarea id="message" placeholder="Your text goes here..." id="myTextArea" cols="30" rows="10"></textarea><br>
-                    <input id="submitButton" type="submit" value="Submit">
+                    <button id="submitButton" type="submit">Submit</button>
                 </form>
-            </section>
+            </section> 
         </section>
         <section id="sideBar">
             <h2>Connect With Me</h2>
